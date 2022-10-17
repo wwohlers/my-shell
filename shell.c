@@ -19,8 +19,10 @@ pid_t launch(char **args)
   pid_t pid = fork();
   if (pid == 0)
   {
-    execvp(args[0], args);
-    printf("Child: Should never get here (%s)\n", args[0]);
+    if (execvp(args[0], args) == -1)
+    {
+      printf("%s: command not found\n", args[0]);
+    }
     exit(1);
   }
   else
