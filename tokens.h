@@ -4,7 +4,7 @@
 /**
  * Split the given string into tokens.
  *
- * The array of tokens obtained using this function can be freed using 
+ * The array of tokens obtained using this function can be freed using
  * free_tokens().
  *
  * @param input input string
